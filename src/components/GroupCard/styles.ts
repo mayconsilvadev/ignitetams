@@ -16,7 +16,7 @@ export const Container = styled(TouchableOpacity)`
 export const Title = styled.Text`
   font-size: ${({ theme }) => theme.FONT_SIZE.MD}px;
   font-family: ${({ theme }) => theme.FONT_FAMILY.REGULAR};
-  color: ${({ theme }) => theme.GRAY_200};
+  color: ${({ theme }) => theme.COLORS.GRAY_200};
 `;
 
 export const Icon = styled(UsersThree).attrs(({ theme }) => ({
