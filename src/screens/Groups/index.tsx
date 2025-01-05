@@ -3,6 +3,7 @@ import { FlatList } from 'react-native';
 
 import { Container } from './styles';
 
+import { Button } from '@components/Button';
 import { Header } from '@components/Header';
 import { Highlight } from '@components/Highlight'
 import { GroupCard } from '@components/GroupCard';
@@ -35,9 +36,13 @@ export function Groups() {
           message="Que tal cadastrar a primeira turma?"
         />
        )}
+       showsHorizontalScrollIndicator={false}
+      />
+      
+      <Button
+       title='Criar nova turma'
       />
 
-      <GroupCard title='Maycon'/>
     </Container>
   );
 }
