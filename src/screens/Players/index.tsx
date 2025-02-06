@@ -116,7 +116,18 @@ export function Players() {
       'Deseja remover a turma?',
       [
         { text: 'Não', style: 'cancel' },
-        { text: 'Sim', onPress: () => groupRemove() }
+        { text: 'Sim', 
+          onPress: async () => {
+            try {
+              await groupRemoveByName(group);
+              Alert.alert('Removido!', `A turma ${group} foi removido com sucesso.`);
+              navigation.navigate('groups');
+
+            } catch (error) {
+              console.error('Erro ao remover grupo:', error);
+              Alert.alert('Erro', 'Não foi possível remover a turma.');
+            }
+          }}
       ]
     )
   }
